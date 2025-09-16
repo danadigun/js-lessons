@@ -15,5 +15,18 @@ Objects*
 
 /*
 Clients -- Server -- database.
-// Scafolding --setting t he foundation. 
+// Scafolding --setting t he foundation.
+
+Scripting::
+React {framework}
+Benefit:
+Create different form 
+Always name the file .jss
+Stacks helps make files in roles.
+
+MUI
+Benefit:
+It has layout
+
+To type text in MuI , we use a text cleed "typography"
 */
