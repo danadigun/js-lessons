@@ -1,10 +1,7 @@
-import Button from '@mui/material/Button';
+import { ContactForm } from "./ContactForm";
 
 function App() {
-
-  return (
-    <Button variant="outlined">Welcome to react!</Button>
-  )
+  return <ContactForm />;
 }
 
-export default App
+export default App;
