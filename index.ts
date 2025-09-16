@@ -9,3 +9,11 @@ Strings -- It is a group of characters.
 Sets -- It is a collection of key value pairs.
 Objects*
 */
+
+
+// Todays notes:
+
+/*
+Clients -- Server -- database.
+// Scafolding --setting t he foundation. 
+*/
