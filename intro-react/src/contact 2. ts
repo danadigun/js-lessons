@@ -1,4 +1,3 @@
-
 import FormControl from "@mui/material/FormControl";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import FormLabel from "@mui/material/FormLabel";
@@ -15,6 +14,10 @@ import { useState } from "react";
 export function ContactForm() {
     const [language, setLaguage] = useState("");
     const [country, setCountry] = useState("");
+    const [email, setEmail] = useState("");
+    const [countryCode, setCountryCode] = useState("");
+    const [day, setDay] = useState("");
+
 
     const handleLanguageChange = (event: SelectChangeEvent) => {
         setLaguage(event.target.value as string);
@@ -22,12 +25,22 @@ export function ContactForm() {
     const handleCountryChange = (event: SelectChangeEvent) => {
         setCountry(event.target.value as string);
     };
+    const handleCountryCodeChange = (event: SelectChangeEvent) => {
+        setCountryCode(event.target.value as string);
+    };
+    const handleEmails = (event: SelectChangeEvent) => {
+        setEmail(event.target.value as string);
+    };
+    const handleDay = (event: SelectChangeEvent) => {
+        setDay(event.target.value as string);
+    };
   return (
     <Stack gap={2}>
       <Stack direction="row" gap={2}>
         <TextField id="first-name" label="First Name" variant="outlined" />
         <TextField id="last-name" label="Last Name" variant="outlined" />
       </Stack>
+      {/* Gender */}
       <Stack gap={2}>
        <FormControl>
           <FormLabel id="demo-row-radio-buttons-group-label"><b>Gender</b></FormLabel>
@@ -84,13 +97,15 @@ export function ContactForm() {
             minRows={5}
             sx={{ mt:2 }}
         />
+        
         <Box sx={{ width: 420 }}>
                 <FormControl fullWidth>
                     <InputLabel id="email-label">Email Address</InputLabel>
                     <Select
                         labelId="email-label"
                         id="email-select"
-                        
+                        value={email}
+                        onChange={handleEmail}
                     >
                         <MenuItem value="example1@example.com">example1@example.com</MenuItem>
                         <MenuItem value="example2@example.com">example2@example.com</MenuItem>
@@ -114,7 +129,7 @@ export function ContactForm() {
                     <MenuItem value="+61">Australia (+61)</MenuItem>
                 </Select> 
             </FormControl> 
-        </Box>        
+        </Box>    
 
         {/* Phone Number */}
         < TextField
@@ -147,8 +162,7 @@ export function ContactForm() {
         type="time"
         placeholder="Select time"
         />
-      </Stack>
     </Stack>
-
   );
 }
+
