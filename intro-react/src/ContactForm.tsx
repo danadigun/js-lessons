@@ -12,11 +12,11 @@ import Box from "@mui/material/Box";
 import { useState } from "react";
 
 export function ContactForm() {
-  const [language, setLaguage] = useState("");
+  const [language, setLanguage] = useState("");
   const [country, setCountry] = useState("");
 
   const handleLanguageChange = (event: SelectChangeEvent) => {
-    setLaguage(event.target.value as string);
+    setLanguage(event.target.value as string);
   };
   const handleCountryChange = (event: SelectChangeEvent) => {
     setCountry(event.target.value as string);
